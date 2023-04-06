@@ -6,5 +6,7 @@
 }
 
 .cart h6 {
-  background-color: aquamarine;
+  background-color: rgb(255, 168, 127);
+  font-size: 16px;
+  padding: 8px;
 }
