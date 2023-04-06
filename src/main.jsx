@@ -8,6 +8,7 @@ import Home from "./Component/Layout/Home";
 import Orders from "./Component/Orders";
 import Inventory from "./Component/inventory";
 import Login from "./Component/Login";
+import cartProductsLoader from "./Component/Loaders/CardProducts";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
       {
         path: "orders",
         element: <Orders></Orders>,
-        loader: () => fetch("products.json"),
+        loader: cartProductsLoader,
       },
       {
         path: "inventory",
