@@ -8,3 +8,12 @@
   gap: 45px;
   margin: 50px;
 }
+.btn-review {
+  padding: 10px 18px;
+  display: flex;
+  justify-content: space-between;
+  background-color: yellow;
+  color: black;
+  width: 90%;
+  margin: 10px auto;
+}
