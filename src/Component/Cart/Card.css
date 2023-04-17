@@ -10,3 +10,12 @@
   font-size: 16px;
   padding: 8px;
 }
+.delete-btn {
+  padding: 10px 18px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  color: crimson;
+  width: 90%;
+  margin: 10px auto;
+}
