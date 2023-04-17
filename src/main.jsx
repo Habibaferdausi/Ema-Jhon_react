@@ -12,6 +12,7 @@ import cartProductsLoader from "./Component/Loaders/CardProducts";
 import Checkout from "./Component/Checkout";
 import SignUp from "./Component/SignUp";
 import AuthProvider from "./Component/AuthProvider";
+import PrivetRoute from "./Component/PrivetRoute";
 
 const router = createBrowserRouter([
   {
@@ -44,7 +45,12 @@ const router = createBrowserRouter([
 
       {
         path: "checkout",
-        element: <Checkout></Checkout>,
+        element: (
+          <PrivetRoute>
+            {" "}
+            <Checkout></Checkout>{" "}
+          </PrivetRoute>
+        ),
       },
     ],
   },
