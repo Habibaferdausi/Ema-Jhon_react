@@ -20,7 +20,6 @@ const Shop = () => {
   const totalPages = Math.ceil(totalProducts / itemsPerPage);
 
   const pageNumbers = [...Array(totalPages).keys()];
-  const options = [5, 10, 20];
 
   useEffect(() => {
     async function fetchData() {
@@ -62,9 +61,10 @@ const Shop = () => {
     deleteShoppingCart();
   };
 
+  const options = [5, 10, 15, 20];
   function handleSelectChange(event) {
     setItemsPerPage(parseInt(event.target.value));
-    setCurrentPage(1);
+    setCurrentPage(0);
   }
 
   return (
@@ -91,17 +91,18 @@ const Shop = () => {
       {/* pagination */}
 
       <div className="pagination">
-        <p>Current page:{currentPage}</p>
+        <p>
+          current Page: {currentPage} and items per page: {itemsPerPage}
+        </p>
         {pageNumbers.map((number) => (
           <button
-            onClick={() => setCurrentPage}
             key={number}
             className={currentPage === number ? "selected" : ""}
+            onClick={() => setCurrentPage(number)}
           >
-            {number}
+            {number + 1}
           </button>
         ))}
-
         <select value={itemsPerPage} onChange={handleSelectChange}>
           {options.map((option) => (
             <option key={option} value={option}>
